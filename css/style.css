@@ -5,8 +5,12 @@ body{
   padding: 0;
   font-family: "Karla";
 }
+iframe{
+  width: 100%;
+  height: auto;
+}
 
-/*-----------Navigation Header --------- */
+/*------------------------------Navigation Header --------------------------------- */
 .nav-top{
   border-bottom: 3px solid rgb(151, 151, 0);
   color: black;
@@ -74,7 +78,7 @@ body{
 }
 
 
-/*Menu*/
+/*---------------------------Menu---------------------------------*/
 .navs ul {
   list-style-type: none;
   margin: 0;
@@ -100,7 +104,7 @@ body{
   text-decoration: none;
 }
 
-/*Carousel*/
+/*---------------------------------Carousel-----------------------*/
 ul.slides {
     display: block;
     position: relative;
@@ -232,7 +236,7 @@ input:checked + .slide-container .nav label { display: block; }
 
 
 
-/*About*/
+/*----------------------------------About--------------------------*/
 .flex-container-about,.flex-container-event{
   display: flex;
   flex-direction: row;
@@ -310,7 +314,7 @@ input:checked + .slide-container .nav label { display: block; }
   font-size: 1.2rem;
 }
 
-/* Programs */
+/* -------------------------------Programs---------------------------------- */
 #programs{
   padding-top: 1.5rem;
 }
@@ -402,7 +406,7 @@ input:checked + .slide-container .nav label { display: block; }
   background-color: rgb(6, 6, 95);
 }
 
-/* Events */
+/* ------------------------------------Events-------------------------------- */
 #event-tabs{
   flex: 60%;
 }
@@ -413,7 +417,7 @@ input:checked + .slide-container .nav label { display: block; }
   width: 3rem;
 }
 
-/* Event Tabs */
+/* -----------------------------------Event Tabs-------------------------------- */
 
 .tabset{
   margin-top: 20px;
@@ -717,12 +721,8 @@ input:checked + .slide-container .nav label { display: block; }
   padding-bottom: 30px;
 }
 
-iframe{
-  width: 100%;
-  height: auto;
-}
 
-/* Partners */
+/* ---------------------------------------Partners-------------------------------- */
 #partners{
   padding-top: 60px;
   padding-bottom: 60px;
@@ -747,13 +747,82 @@ iframe{
   height: 120px;
 }
 
+/*------------------------------------- Footer ----------------------*/
+footer{
+  background-color: rgb(3, 52, 100);
+  color: white;
+}
+.footer-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px;
+  border-bottom: 1px solid white;
+}
+.footer-columns{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.footer-columns img:nth-child(1){
+  margin-bottom: 20px;
+}
+.footer-columns img{
+  width: 100%;
+  height: auto;
+}
+#footer-logo{
+  width: 100px;
+}
+#footer-brand{
+  justify-content: center;
+  align-items: center;
+}
+.footer-ul{
+  display: flex;
+  flex-direction: row;
+}
+.contact-details i{
+  margin-right: 10px;
+}
+.contact-details a,.footer-ul a{
+  color: white;
+  text-decoration: none;
+}
+.contact-details{
+  padding: 7px 7px;
+}
+.footer-ul li{
+  padding: 4px 4px;
+}
+.contact-details label{
+  margin-left: 25px;
+}
+.footer-divider{
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+#footer-last small{
+  color: #ccc;
+}
+#footer-last h4{
+  padding: 0 0;
+  margin: 0 0;
+}
+#footer-last{
+  padding: 0 80px 0 80px;
+  margin: 0 0;
+  justify-content: space-between;
+  border:none;
+}
 
 
-
-
-/*Media Query*/
+/*--------------------------------Media Query---------------------------------*/
 
 @media only screen and (max-width: 860px) {
+  .footer-container{
+    flex-direction: column;
+  }
   .p-logo img{
     padding: 15px;
     width: 150px;
@@ -775,6 +844,15 @@ iframe{
   .carousel-controls {
     font-size: 50px;
     line-height: 250px;
+  }
+  .footer-columns{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 5px 5px;
+  }
+  .footer-columns h4{
+    text-align: center;
   }
 }
 
