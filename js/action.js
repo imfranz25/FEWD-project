@@ -1,4 +1,47 @@
 
+while(true){
+  if (confirm("This website was created for compliance with our final project requirement in Intermediate Front-End Web Development Bootcamp, and it is not the official website of Bayan Academy. \n\n[Bayan Academy Official Website: https://www.bayanacademy.orgs] \n\n - Francis C. Ong")) break;
+}
+
+// Navigation Toggler
+
+const togglerBtn = document.querySelector('#toggle-btn');
+const navs = document.querySelector('.navs');
+const uls = document.querySelector('.navs ul');
+const lis = document.querySelectorAll('.navs li');
+
+
+togglerBtn.addEventListener('click',function(){
+  let trigger = togglerBtn.classList.contains('toggled');
+  if (!trigger) {
+    togglerBtn.classList.add('toggled');
+    navs.style = 'display:block';
+    uls.style = 'display:block;';
+    for (let index = 0; index < lis.length; index++) {
+      lis[index].style = 'width:100%;margin:0;';
+    }
+  }else{
+    togglerBtn.classList.remove('toggled');
+    navs.style = 'display:none;';
+  }
+});
+
+
+
+window.addEventListener('resize', function(){
+  if (window.innerWidth >= 1080) {
+    togglerBtn.classList.remove('toggled');
+    navs.style = 'display:block';
+    uls.style = 'display:flex;';
+    for (let index = 0; index < lis.length; index++) {
+      lis[index].style = 'width:auto;';
+    }
+  }else{
+    navs.style = 'display:none';
+  }
+});
+
+
 // =======================NEWS NAVIGATION=========================
 
 const newsBtn = document.querySelectorAll('#news button');
@@ -19,6 +62,7 @@ for (let index = 0; index < btnLength; index++) {
     showContent(index);
   });
 }
+
 
 //================================== Partners===========================================
 
