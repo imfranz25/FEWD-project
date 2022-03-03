@@ -746,23 +746,78 @@ input:checked + .slide-container .nav label { display: block; }
   width: 170px;
   height: 120px;
 }
+/* ------------------------------- */
+#inquiry{
+  color: black;
+  font-weight: bolder;
+  background-color: rgb(255, 178, 34);
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -200px;
+  position: relative;
+}
+#inquiry div:nth-child(1){
+  padding: 40px 40px;
+  flex: 50%;
+}
+#inquiry div:nth-child(2){
+  margin: 0;
+  padding: 0;
+  flex: 50%;
+  padding: 20px;
+}
+#inquiry a{
+  text-decoration: none;
+  background-color: white;
+  color: blue;
+  padding: 15px 20px 15px 20px;
+  font-weight: bolder;
+  text-shadow: 1px 0px blue;
+  font-size: 1.2rem;
+  border-radius: 3px;
+  width: 100px;
+  text-align: center;
+}
+#inquiry img{
+  width: 600px;
+  height: 250px;
+}
+#inquiry span{
+  color: rgb(6, 6, 129);
+}
+#inquiry p{
+  margin-bottom: 50px;
+}
+#img-inquiry::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 80px solid white;
+  border-left: 80px solid yellow;
+  width: 0;
+}
+
 
 /*------------------------------------- Footer ----------------------*/
 footer{
   background-color: rgb(3, 52, 100);
   color: white;
+  z-index: -1;
 }
 .footer-container{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   padding: 30px;
+  padding: 100px;
   border-bottom: 1px solid white;
 }
 .footer-columns{
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 20px;
 }
 .footer-columns img:nth-child(1){
   margin-bottom: 20px;
@@ -820,6 +875,15 @@ footer{
 /*--------------------------------Media Query---------------------------------*/
 
 @media only screen and (max-width: 860px) {
+  #footer-last{
+    padding-top: 10px;
+  }
+  #footer-info{
+    padding-bottom: 10px;
+  }
+  #footer-brand{
+    margin-top: 80px;
+  }
   .footer-container{
     flex-direction: column;
   }
@@ -856,7 +920,24 @@ footer{
   }
 }
 
+
 @media only screen and (max-width: 1080px) {
+  #footer-name{
+    max-width: 150px;
+    height: auto;
+  }
+  #footer-info{
+    padding-bottom: 10px;
+  }
+  .footer-container{
+    margin-top: 20px;
+  }
+  #inquiry{
+    flex-direction: column;
+  }
+  #img-inquiry{
+    display: none;
+  }
   ul.slides {
     height: 400px;
   }
